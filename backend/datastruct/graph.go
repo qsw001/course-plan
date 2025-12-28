@@ -1,0 +1,40 @@
+package datastruct
+
+//图结构
+type Graph struct {
+	Adj map[string][]string //邻接表
+	InDegree map[string]int //入度表
+}
+
+//*************************图的操作**************************//
+
+//图的初始化
+
+func Init() *Graph{
+	return &Graph{
+		Adj: make(map[string][]string),
+		InDegree: make(map[string]int),
+	}
+}
+
+//添加节点
+
+func (g *Graph) AddNode(id string){
+	//判断是否为空，如果为空，则添加节点(键),将值赋值为空
+	if _, ok := g.Adj[id]; !ok{
+		g.Adj[id] = []string{}
+	}
+	if _, ok := g.InDegree[id]; !ok{
+		g.InDegree[id] = 0
+	}
+}
+
+//添加边
+
+func (g* Graph) AddEdge(pre, cur string){
+	g.AddNode(pre)
+	g.AddNode(cur)
+
+	g.Adj[pre] = append(g.Adj[pre], cur)
+	g.InDegree[cur]++
+}
