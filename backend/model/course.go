@@ -8,3 +8,4 @@ type Course struct {
 	IsCore    bool     `json:"is_core"`
 	IsBasic   bool     `json:"is_basic"`
 }
+
