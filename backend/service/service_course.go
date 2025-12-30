@@ -9,7 +9,7 @@ import (
 	//"golang.org/x/text/unicode/rangetable"
 )
 
-//本文件主要负责文件内容的增删查改
+//本文件主要负责文件内容的(CRUD)增删查改
 
 const Path = "data/courses.json"
 
@@ -94,10 +94,10 @@ func AddCourse(course model.Course) error {
 
 // 更新课程
 func UpdateCourse(newCourse model.Course) error {
-	courses, err := GetAllCourses()
-	if err != nil {
-		return err
-	}
+	// courses, err := GetAllCourses()
+	// if err != nil {
+	// 	return err
+	// }
 
 	nowCourse, err := GetCourseById(newCourse.ID)
 	if err != nil {
@@ -105,7 +105,36 @@ func UpdateCourse(newCourse model.Course) error {
 	}
 
 	//这里可能有问题
-	nowCourse = &newCourse
-	errors("err!!!!!!!!!!!!!!!")
+	*nowCourse = newCourse
 
+	courses, err := GetAllCourses()
+	if err != nil {
+		return nil
+	}
+
+	return SaveCourses(courses)
+}
+
+func DeleteCourse(id string) error {
+	courses, err := GetAllCourses()
+	if err != nil{
+		return err
+	}
+
+	found := false
+	newCourses := make([]model.Course, 0)
+
+	for _, c := range courses {
+		if c.ID == id {
+			found = true
+			continue
+		}
+		newCourses = append(newCourses, c)
+	}
+
+	if !found {
+		return errors.New("未找到要删除的课程")
+	}
+
+	return SaveCourses(newCourses)
 }
