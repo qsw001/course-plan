@@ -259,5 +259,101 @@
   ],
   "is_core": true,
   "is_basic": false
- }
+ },
+  {
+    "id": "MTH101",
+    "name": "高等数学_I",
+    "credit": 4,
+    "preCourse": [],
+    "isCore": false,
+    "isBasic": true
+  },
+  {
+    "id": "MTH102",
+    "name": "高等数学_II",
+    "credit": 4,
+    "preCourse": ["MTH101"],
+    "isCore": false,
+    "isBasic": true
+  },
+  {
+    "id": "PHY101",
+    "name": "大学物理_I",
+    "credit": 3,
+    "preCourse": [],
+    "isCore": false,
+    "isBasic": true
+  },
+  {
+    "id": "ENG101",
+    "name": "大学英语_I",
+    "credit": 2,
+    "preCourse": [],
+    "isCore": false,
+    "isBasic": true
+  },
+  {
+    "id": "ENG102",
+    "name": "大学英语_II",
+    "credit": 2,
+    "preCourse": ["ENG101"],
+    "isCore": false,
+    "isBasic": true
+  },
+  {
+    "id": "POL101",
+    "name": "思想道德与法治",
+    "credit": 3,
+    "preCourse": [],
+    "isCore": false,
+    "isBasic": true
+  },
+  {
+    "id": "POL102",
+    "name": "中国近现代史纲要",
+    "credit": 3,
+    "preCourse": [],
+    "isCore": false,
+    "isBasic": true
+  },
+  {
+    "id": "ECO101",
+    "name": "经济学原理",
+    "credit": 3,
+    "preCourse": [],
+    "isCore": false,
+    "isBasic": false
+  },
+  {
+    "id": "LAW101",
+    "name": "大学生法律基础",
+    "credit": 2,
+    "preCourse": [],
+    "isCore": false,
+    "isBasic": false
+  },
+  {
+    "id": "ART101",
+    "name": "艺术鉴赏",
+    "credit": 2,
+    "preCourse": [],
+    "isCore": false,
+    "isBasic": false
+  },
+  {
+    "id": "PE101",
+    "name": "大学体育_I",
+    "credit": 1,
+    "preCourse": [],
+    "isCore": false,
+    "isBasic": true
+  },
+  {
+    "id": "PE102",
+    "name": "大学体育_II",
+    "credit": 1,
+    "preCourse": ["PE101"],
+    "isCore": false,
+    "isBasic": true
+  }
 ]
