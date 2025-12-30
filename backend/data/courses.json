@@ -1,214 +1,263 @@
 [
-  {
-    "id": "CS101",
-    "name": "程序设计基础",
-    "credit": 3,
-    "prerequisites": [],
-    "is_basic": true,
-    "is_core": false
-  },
-  {
-    "id": "CS102",
-    "name": "C语言程序设计",
-    "credit": 4,
-    "prerequisites": ["CS101"],
-    "is_basic": true,
-    "is_core": false
-  },
-  {
-    "id": "CS103",
-    "name": "离散数学",
-    "credit": 3,
-    "prerequisites": [],
-    "is_basic": true,
-    "is_core": false
-  },
-  {
-    "id": "CS104",
-    "name": "数据结构",
-    "credit": 4,
-    "prerequisites": ["CS102", "CS103"],
-    "is_basic": false,
-    "is_core": true
-  },
-  {
-    "id": "CS105",
-    "name": "计算机组成原理",
-    "credit": 4,
-    "prerequisites": ["CS102"],
-    "is_basic": false,
-    "is_core": true
-  },
-  {
-    "id": "CS106",
-    "name": "操作系统",
-    "credit": 4,
-    "prerequisites": ["CS104", "CS105"],
-    "is_basic": false,
-    "is_core": true
-  },
-  {
-    "id": "CS107",
-    "name": "计算机网络",
-    "credit": 3,
-    "prerequisites": ["CS104"],
-    "is_basic": false,
-    "is_core": true
-  },
-  {
-    "id": "CS108",
-    "name": "数据库系统原理",
-    "credit": 3,
-    "prerequisites": ["CS104"],
-    "is_basic": false,
-    "is_core": true
-  },
-  {
-    "id": "CS109",
-    "name": "软件工程",
-    "credit": 3,
-    "prerequisites": ["CS104"],
-    "is_basic": false,
-    "is_core": false
-  },
-  {
-    "id": "CS110",
-    "name": "算法设计与分析",
-    "credit": 4,
-    "prerequisites": ["CS104"],
-    "is_basic": false,
-    "is_core": true
-  },
-
-  {
-    "id": "CS201",
-    "name": "面向对象程序设计",
-    "credit": 3,
-    "prerequisites": ["CS102"],
-    "is_basic": false,
-    "is_core": false
-  },
-  {
-    "id": "CS202",
-    "name": "Java程序设计",
-    "credit": 3,
-    "prerequisites": ["CS201"],
-    "is_basic": false,
-    "is_core": false
-  },
-  {
-    "id": "CS203",
-    "name": "Python程序设计",
-    "credit": 2,
-    "prerequisites": ["CS101"],
-    "is_basic": false,
-    "is_core": false
-  },
-  {
-    "id": "CS204",
-    "name": "编译原理",
-    "credit": 4,
-    "prerequisites": ["CS104"],
-    "is_basic": false,
-    "is_core": true
-  },
-  {
-    "id": "CS205",
-    "name": "计算机图形学",
-    "credit": 3,
-    "prerequisites": ["CS104"],
-    "is_basic": false,
-    "is_core": false
-  },
-
-  {
-    "id": "CS301",
-    "name": "人工智能导论",
-    "credit": 3,
-    "prerequisites": ["CS110"],
-    "is_basic": false,
-    "is_core": false
-  },
-  {
-    "id": "CS302",
-    "name": "机器学习",
-    "credit": 3,
-    "prerequisites": ["CS301"],
-    "is_basic": false,
-    "is_core": false
-  },
-  {
-    "id": "CS303",
-    "name": "数据挖掘",
-    "credit": 3,
-    "prerequisites": ["CS302"],
-    "is_basic": false,
-    "is_core": false
-  },
-  {
-    "id": "CS304",
-    "name": "深度学习",
-    "credit": 3,
-    "prerequisites": ["CS302"],
-    "is_basic": false,
-    "is_core": false
-  },
-  {
-    "id": "CS305",
-    "name": "自然语言处理",
-    "credit": 3,
-    "prerequisites": ["CS302"],
-    "is_basic": false,
-    "is_core": false
-  },
-
-  {
-    "id": "CS306",
-    "name": "信息安全基础",
-    "credit": 3,
-    "prerequisites": ["CS107"],
-    "is_basic": false,
-    "is_core": false
-  },
-  {
-    "id": "CS307",
-    "name": "网络安全",
-    "credit": 3,
-    "prerequisites": ["CS306"],
-    "is_basic": false,
-    "is_core": false
-  },
-  {
-    "id": "CS308",
-    "name": "分布式系统",
-    "credit": 3,
-    "prerequisites": ["CS106", "CS107"],
-    "is_basic": false,
-    "is_core": true
-  },
-  {
-    "id": "CS309",
-    "name": "云计算技术",
-    "credit": 2,
-    "prerequisites": ["CS308"],
-    "is_basic": false,
-    "is_core": false
-  },
-  {
-    "id": "CS310",
-    "name": "大数据技术",
-    "credit": 3,
-    "prerequisites": ["CS308"],
-    "is_basic": false,
-    "is_core": false
-  },
-
-  {
-    "id": "CS401",
-    "name": "毕业设计",
-    "credit": 8,
-    "prerequisites": ["CS110", "CS106", "CS107"],
-    "is_basic": false,
-    "is_core": true
-  }
+ {
+  "id": "CS101",
+  "name": "程序设计基础",
+  "credit": 3,
+  "prerequisites": [],
+  "is_core": false,
+  "is_basic": true
+ },
+ {
+  "id": "CS102",
+  "name": "C语言程序设计",
+  "credit": 4,
+  "prerequisites": [
+   "CS101"
+  ],
+  "is_core": false,
+  "is_basic": true
+ },
+ {
+  "id": "CS103",
+  "name": "离散数学",
+  "credit": 3,
+  "prerequisites": [],
+  "is_core": false,
+  "is_basic": true
+ },
+ {
+  "id": "CS104",
+  "name": "数据结构",
+  "credit": 4,
+  "prerequisites": [
+   "CS102",
+   "CS103"
+  ],
+  "is_core": true,
+  "is_basic": false
+ },
+ {
+  "id": "CS105",
+  "name": "计算机组成原理",
+  "credit": 4,
+  "prerequisites": [
+   "CS102"
+  ],
+  "is_core": true,
+  "is_basic": false
+ },
+ {
+  "id": "CS106",
+  "name": "操作系统",
+  "credit": 4,
+  "prerequisites": [
+   "CS104",
+   "CS105"
+  ],
+  "is_core": true,
+  "is_basic": false
+ },
+ {
+  "id": "CS107",
+  "name": "计算机网络",
+  "credit": 3,
+  "prerequisites": [
+   "CS104"
+  ],
+  "is_core": true,
+  "is_basic": false
+ },
+ {
+  "id": "CS108",
+  "name": "数据库系统原理",
+  "credit": 3,
+  "prerequisites": [
+   "CS104"
+  ],
+  "is_core": true,
+  "is_basic": false
+ },
+ {
+  "id": "CS109",
+  "name": "软件工程",
+  "credit": 3,
+  "prerequisites": [
+   "CS104"
+  ],
+  "is_core": false,
+  "is_basic": false
+ },
+ {
+  "id": "CS110",
+  "name": "算法设计与分析",
+  "credit": 4,
+  "prerequisites": [
+   "CS104"
+  ],
+  "is_core": true,
+  "is_basic": false
+ },
+ {
+  "id": "CS201",
+  "name": "面向对象程序设计",
+  "credit": 3,
+  "prerequisites": [
+   "CS102"
+  ],
+  "is_core": false,
+  "is_basic": false
+ },
+ {
+  "id": "CS202",
+  "name": "Java程序设计",
+  "credit": 3,
+  "prerequisites": [
+   "CS201"
+  ],
+  "is_core": false,
+  "is_basic": false
+ },
+ {
+  "id": "CS203",
+  "name": "Python程序设计",
+  "credit": 2,
+  "prerequisites": [
+   "CS101"
+  ],
+  "is_core": false,
+  "is_basic": false
+ },
+ {
+  "id": "CS204",
+  "name": "编译原理",
+  "credit": 4,
+  "prerequisites": [
+   "CS104"
+  ],
+  "is_core": true,
+  "is_basic": false
+ },
+ {
+  "id": "CS205",
+  "name": "计算机图形学",
+  "credit": 3,
+  "prerequisites": [
+   "CS104"
+  ],
+  "is_core": false,
+  "is_basic": false
+ },
+ {
+  "id": "CS301",
+  "name": "人工智能导论",
+  "credit": 3,
+  "prerequisites": [
+   "CS110"
+  ],
+  "is_core": false,
+  "is_basic": false
+ },
+ {
+  "id": "CS302",
+  "name": "机器学习",
+  "credit": 3,
+  "prerequisites": [
+   "CS301"
+  ],
+  "is_core": false,
+  "is_basic": false
+ },
+ {
+  "id": "CS303",
+  "name": "数据挖掘",
+  "credit": 3,
+  "prerequisites": [
+   "CS302"
+  ],
+  "is_core": false,
+  "is_basic": false
+ },
+ {
+  "id": "CS304",
+  "name": "深度学习",
+  "credit": 3,
+  "prerequisites": [
+   "CS302"
+  ],
+  "is_core": false,
+  "is_basic": false
+ },
+ {
+  "id": "CS305",
+  "name": "自然语言处理",
+  "credit": 3,
+  "prerequisites": [
+   "CS302"
+  ],
+  "is_core": false,
+  "is_basic": false
+ },
+ {
+  "id": "CS306",
+  "name": "信息安全基础",
+  "credit": 3,
+  "prerequisites": [
+   "CS107"
+  ],
+  "is_core": false,
+  "is_basic": false
+ },
+ {
+  "id": "CS307",
+  "name": "网络安全",
+  "credit": 3,
+  "prerequisites": [
+   "CS306"
+  ],
+  "is_core": false,
+  "is_basic": false
+ },
+ {
+  "id": "CS308",
+  "name": "分布式系统",
+  "credit": 3,
+  "prerequisites": [
+   "CS106",
+   "CS107"
+  ],
+  "is_core": true,
+  "is_basic": false
+ },
+ {
+  "id": "CS309",
+  "name": "云计算技术",
+  "credit": 2,
+  "prerequisites": [
+   "CS308"
+  ],
+  "is_core": false,
+  "is_basic": false
+ },
+ {
+  "id": "CS310",
+  "name": "大数据技术",
+  "credit": 3,
+  "prerequisites": [
+   "CS308"
+  ],
+  "is_core": false,
+  "is_basic": false
+ },
+ {
+  "id": "CS401",
+  "name": "毕业设计",
+  "credit": 8,
+  "prerequisites": [
+   "CS110",
+   "CS106",
+   "CS107"
+  ],
+  "is_core": true,
+  "is_basic": false
+ }
 ]

@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"os"
+	//"fmt"
 
 	"backend/model"
 	//"golang.org/x/text/unicode/rangetable"
@@ -81,39 +82,66 @@ func AddCourse(course model.Course) error {
 		return err
 	}
 
+	//fmt.Println("执行1")
 	for _, c := range courses {
 		if c.ID == course.ID || c.Name == course.Name {
 			return errors.New("课程序列号或名字重复，请重新输入")
 		}
 	}
 
+	//fmt.Println("执行2")
 	courses = append(courses, course)
 
+	//fmt.Println("执行3")
 	return SaveCourses(courses)
 }
 
 // 更新课程
+
 func UpdateCourse(newCourse model.Course) error {
-	// courses, err := GetAllCourses()
-	// if err != nil {
-	// 	return err
-	// }
+    courses, err := GetAllCourses()
+    if err != nil {
+        return err
+    }
 
-	nowCourse, err := GetCourseById(newCourse.ID)
-	if err != nil {
-		return errors.New("更新失败")
-	}
+    found := false
+    for i := range courses {
+        if courses[i].ID == newCourse.ID {
+            courses[i] = newCourse
+            found = true
+            break
+        }
+    }
 
-	//这里可能有问题
-	*nowCourse = newCourse
+    if !found {
+        return errors.New("未找到课程")
+    }
 
-	courses, err := GetAllCourses()
-	if err != nil {
-		return nil
-	}
-
-	return SaveCourses(courses)
+    return SaveCourses(courses)
 }
+// func UpdateCourse(newCourse model.Course) error {
+// 	// courses, err := GetAllCourses()
+// 	// if err != nil {
+// 	// 	return err
+// 	// }
+
+// 	nowCourse, err := GetCourseById(newCourse.ID)
+// 	if err != nil {
+// 		return errors.New("更新失败")
+// 	}
+
+// 	//这里可能有问题
+// 	*nowCourse = newCourse
+
+// 	fmt.Println("执行1")
+// 	courses, err := GetAllCourses()
+// 	if err != nil {
+// 		return nil
+// 	}
+
+// 	fmt.Println("执行2")
+// 	return SaveCourses(courses)
+// }
 
 func DeleteCourse(id string) error {
 	courses, err := GetAllCourses()
