@@ -15,6 +15,7 @@ import (
 const Path = "data/courses.json"
 
 // 获得所有文件
+
 func GetAllCourses() ([]model.Course, error) {
 	//读文件
 	data, err := os.ReadFile(Path)
@@ -33,6 +34,7 @@ func GetAllCourses() ([]model.Course, error) {
 }
 
 // 按课程号查询文件
+
 func GetCourseById(id string) (*model.Course, error) {
 	courses, err := GetAllCourses()
 	if err != nil {
@@ -49,6 +51,7 @@ func GetCourseById(id string) (*model.Course, error) {
 }
 
 // 按名字查询文件
+
 func GetCourseByName(name string) (*model.Course, error) {
 	courses, err := GetAllCourses()
 	if err != nil {
@@ -65,6 +68,7 @@ func GetCourseByName(name string) (*model.Course, error) {
 }
 
 // 保存文件
+
 func SaveCourses(courses []model.Course) error {
 	data, err := json.MarshalIndent(courses, "", " ")
 	if err != nil {
@@ -76,6 +80,7 @@ func SaveCourses(courses []model.Course) error {
 }
 
 // 新加课程
+
 func AddCourse(course model.Course) error {
 	courses, err := GetAllCourses()
 	if err != nil {
@@ -142,6 +147,8 @@ func UpdateCourse(newCourse model.Course) error {
 // 	fmt.Println("执行2")
 // 	return SaveCourses(courses)
 // }
+
+//删除课程
 
 func DeleteCourse(id string) error {
 	courses, err := GetAllCourses()
