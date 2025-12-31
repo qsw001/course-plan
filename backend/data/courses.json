@@ -3,7 +3,7 @@
   "id": "CS101",
   "name": "程序设计基础",
   "credit": 3,
-  "prerequisites": [],
+  "preCourse": [],
   "is_core": false,
   "is_basic": true
  },
@@ -11,7 +11,7 @@
   "id": "CS102",
   "name": "C语言程序设计",
   "credit": 4,
-  "prerequisites": [
+  "preCourse": [
    "CS101"
   ],
   "is_core": false,
@@ -21,7 +21,7 @@
   "id": "CS103",
   "name": "离散数学",
   "credit": 3,
-  "prerequisites": [],
+  "preCourse": [],
   "is_core": false,
   "is_basic": true
  },
@@ -29,7 +29,7 @@
   "id": "CS104",
   "name": "数据结构",
   "credit": 4,
-  "prerequisites": [
+  "preCourse": [
    "CS102",
    "CS103"
   ],
@@ -40,7 +40,7 @@
   "id": "CS105",
   "name": "计算机组成原理",
   "credit": 4,
-  "prerequisites": [
+  "preCourse": [
    "CS102"
   ],
   "is_core": true,
@@ -50,7 +50,7 @@
   "id": "CS106",
   "name": "操作系统",
   "credit": 4,
-  "prerequisites": [
+  "preCourse": [
    "CS104",
    "CS105"
   ],
@@ -61,7 +61,7 @@
   "id": "CS107",
   "name": "计算机网络",
   "credit": 3,
-  "prerequisites": [
+  "preCourse": [
    "CS104"
   ],
   "is_core": true,
@@ -71,7 +71,7 @@
   "id": "CS108",
   "name": "数据库系统原理",
   "credit": 3,
-  "prerequisites": [
+  "preCourse": [
    "CS104"
   ],
   "is_core": true,
@@ -81,7 +81,7 @@
   "id": "CS109",
   "name": "软件工程",
   "credit": 3,
-  "prerequisites": [
+  "preCourse": [
    "CS104"
   ],
   "is_core": false,
@@ -91,7 +91,7 @@
   "id": "CS110",
   "name": "算法设计与分析",
   "credit": 4,
-  "prerequisites": [
+  "preCourse": [
    "CS104"
   ],
   "is_core": true,
@@ -101,7 +101,7 @@
   "id": "CS201",
   "name": "面向对象程序设计",
   "credit": 3,
-  "prerequisites": [
+  "preCourse": [
    "CS102"
   ],
   "is_core": false,
@@ -111,7 +111,7 @@
   "id": "CS202",
   "name": "Java程序设计",
   "credit": 3,
-  "prerequisites": [
+  "preCourse": [
    "CS201"
   ],
   "is_core": false,
@@ -121,7 +121,7 @@
   "id": "CS203",
   "name": "Python程序设计",
   "credit": 2,
-  "prerequisites": [
+  "preCourse": [
    "CS101"
   ],
   "is_core": false,
@@ -131,7 +131,7 @@
   "id": "CS204",
   "name": "编译原理",
   "credit": 4,
-  "prerequisites": [
+  "preCourse": [
    "CS104"
   ],
   "is_core": true,
@@ -141,7 +141,7 @@
   "id": "CS205",
   "name": "计算机图形学",
   "credit": 3,
-  "prerequisites": [
+  "preCourse": [
    "CS104"
   ],
   "is_core": false,
@@ -151,7 +151,7 @@
   "id": "CS301",
   "name": "人工智能导论",
   "credit": 3,
-  "prerequisites": [
+  "preCourse": [
    "CS110"
   ],
   "is_core": false,
@@ -161,7 +161,7 @@
   "id": "CS302",
   "name": "机器学习",
   "credit": 3,
-  "prerequisites": [
+  "preCourse": [
    "CS301"
   ],
   "is_core": false,
@@ -171,7 +171,7 @@
   "id": "CS303",
   "name": "数据挖掘",
   "credit": 3,
-  "prerequisites": [
+  "preCourse": [
    "CS302"
   ],
   "is_core": false,
@@ -181,7 +181,7 @@
   "id": "CS304",
   "name": "深度学习",
   "credit": 3,
-  "prerequisites": [
+  "preCourse": [
    "CS302"
   ],
   "is_core": false,
@@ -191,7 +191,7 @@
   "id": "CS305",
   "name": "自然语言处理",
   "credit": 3,
-  "prerequisites": [
+  "preCourse": [
    "CS302"
   ],
   "is_core": false,
@@ -201,7 +201,7 @@
   "id": "CS306",
   "name": "信息安全基础",
   "credit": 3,
-  "prerequisites": [
+  "preCourse": [
    "CS107"
   ],
   "is_core": false,
@@ -211,7 +211,7 @@
   "id": "CS307",
   "name": "网络安全",
   "credit": 3,
-  "prerequisites": [
+  "preCourse": [
    "CS306"
   ],
   "is_core": false,
@@ -221,7 +221,7 @@
   "id": "CS308",
   "name": "分布式系统",
   "credit": 3,
-  "prerequisites": [
+  "preCourse": [
    "CS106",
    "CS107"
   ],
@@ -232,7 +232,7 @@
   "id": "CS309",
   "name": "云计算技术",
   "credit": 2,
-  "prerequisites": [
+  "preCourse": [
    "CS308"
   ],
   "is_core": false,
@@ -242,7 +242,7 @@
   "id": "CS310",
   "name": "大数据技术",
   "credit": 3,
-  "prerequisites": [
+  "preCourse": [
    "CS308"
   ],
   "is_core": false,
@@ -252,7 +252,7 @@
   "id": "CS401",
   "name": "毕业设计",
   "credit": 8,
-  "prerequisites": [
+  "preCourse": [
    "CS110",
    "CS106",
    "CS107"

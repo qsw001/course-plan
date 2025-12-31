@@ -1,9 +1,8 @@
 package main
 
-//import "github.com/gin-gonic/gin"
-
 import (
 	"fmt"
+	"github.com/gin-gonic/gin"
 
 	//"backend/datastruct"
 	//"backend/model"
@@ -28,9 +27,10 @@ func main() {
 	// 	fmt.Printf("%+v\n",course)
 	// }
 
-	c, _ := service.Schedule(courses,8,16)
+	c, credit, _ := service.Schedule(courses,12)
 	for a, b := range c{
 		fmt.Printf("%v:",a)
+		fmt.Printf("%v:",credit)
 		fmt.Printf("%+v\n",b)
 	}
 }
