@@ -90,14 +90,23 @@ func (g *Graph) PrintGraph() {
 
 //图的构建
 
-func BuildGraph(courses []model.Course) *Graph{
+func BuildGraph(courses []model.Course) (*Graph, error) {
 	g := Init()
+	
+	courseMap := make(map[string]bool)
+	for _, course := range courses {
+		courseMap[course.ID] = true
+	}
+
 	for _, course := range courses{
 		g.AddNode(course.ID)
 		for _, pre := range course.PreCourse{
+			if !courseMap[pre] {
+				return nil, fmt.Errorf("课程 %s 的先修课程 %s 不在课程列表中", course.ID, pre)
+			}
 			g.AddEdge(pre,course.ID)
 		}
 	}
-	return g
+	return g, nil
 }
 

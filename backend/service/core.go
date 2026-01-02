@@ -1,19 +1,22 @@
 package service
 
-import(
+import (
 	"fmt"
-	
+
 	"backend/datastruct"
 	"backend/model"
 )
 
 func Schedule(courses []model.Course, totalSemester int) ([][]model.Course, int, error) {
 	// 构建图
-	g := datastruct.BuildGraph(courses)
+	g, err := datastruct.BuildGraph(courses)
+	if err != nil {
+		return nil, 0, err
+	}
 
 	//检查是否有环
-	_, err := TopoSort(g)
-	if err != nil{
+	_, err = TopoSort(g)
+	if err != nil {
 		return nil, 0, err
 	}
 
@@ -33,10 +36,10 @@ func Schedule(courses []model.Course, totalSemester int) ([][]model.Course, int,
 
 	//初步估算出最大的学分
 	var totalCredit int
-	for _, course := range courses{
+	for _, course := range courses {
 		totalCredit += course.Credit
 	}
-	
+
 	variable := GetVariable(totalSemester)
 
 	maxCredit := totalCredit/totalSemester + variable
@@ -59,7 +62,7 @@ func Schedule(courses []model.Course, totalSemester int) ([][]model.Course, int,
 		for _, cid := range available {
 			c := courseMap[cid]
 
-			if curCredit + c.Credit > maxCredit {
+			if curCredit+c.Credit > maxCredit {
 				nextAvailable = append(nextAvailable, cid)
 				continue
 			}
@@ -96,7 +99,7 @@ func Schedule(courses []model.Course, totalSemester int) ([][]model.Course, int,
 	return plan, maxCredit, nil
 }
 
-//将可以安排的课程按专业课和核心课的顺序进行排序
+// 将可以安排的课程按专业课和核心课的顺序进行排序
 func SortAvailable(ids []string, courseMap map[string]model.Course) {
 	n := len(ids)
 
@@ -132,17 +135,17 @@ func HigherPriority(a, b model.Course) bool {
 
 func GetMaxCredit(plan [][]model.Course) int {
 	var temp int
-	for _, semesterCourses := range plan{
+	for _, semesterCourses := range plan {
 		var semesterCredit int
-		for _, course := range semesterCourses{
+		for _, course := range semesterCourses {
 			semesterCredit += course.Credit
 		}
-		if semesterCredit > temp{
+		if semesterCredit > temp {
 			temp = semesterCredit
 		}
 	}
 	return temp
-} 
+}
 
 func GetVariable(totalSemester int) int {
 	if totalSemester == 6 {
