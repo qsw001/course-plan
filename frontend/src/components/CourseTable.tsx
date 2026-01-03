@@ -121,7 +121,7 @@ export const CourseTable = () => {
         <Space>
           {record.isCore && <Tag color="blue" bordered={false}>核心</Tag>}
           {record.isBasic && <Tag color="green" bordered={false}>基础</Tag>}
-          {!record.isCore && !record.isBasic && <Tag color="default" bordered={false}>选修</Tag>}
+          {!record.isCore && !record.isBasic && <Tag color="default" bordered={false}>必修</Tag>}
         </Space>
       ),
     },
